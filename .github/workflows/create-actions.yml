@@ -1,7 +1,7 @@
 name: Creat Action Workflow
 
 on: 
-  [create,push]
+  [create]
 
 jobs:
   release-git-action:
