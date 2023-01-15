@@ -16,6 +16,7 @@ jobs:
           git remote add origin "htts://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
           git config --global user.email "bot@bot.com"
           git config --global user.name "bot"
+          git config --global init.defaultBranch 'main'
           git pull
           git fetch -a
           git checkout 'main'
