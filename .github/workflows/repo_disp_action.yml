@@ -1,0 +1,12 @@
+name: Repo Dispather Workflow
+
+on:
+  repository_dispatch:
+    types: [test_result]
+
+jobs:
+  run-repository-dispatcher:
+    runs-on: ubuntu-latest
+    steps:
+      - name: repo-disp
+        run: echo ${{github.event.client_payload.message}}  
