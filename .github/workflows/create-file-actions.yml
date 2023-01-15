@@ -18,10 +18,10 @@ jobs:
           git config --global user.name "bot"
           git config --global init.defaultBranch main
           git branch -m master main
-          git branch --set-upstream-to=origin/main
-          # git pull
-          # git fetch -a
-          # git branches
+          git pull
+          git fetch -a
+          git branches
+          # git branch --set-upstream-to=origin/main
           # git checkout 'main'
           # echo $RANDOM >> random.txt
           # git add random
