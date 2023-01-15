@@ -21,9 +21,10 @@ jobs:
           git pull origin main
           git fetch -a
           # git branch
-          # git branch --set-upstream-to=origin/main
+          
           git checkout 'main'
           echo $RANDOM >> random.txt
           git add .
           git commit -m "random file"
+          git branch --set-upstream-to=origin/main
           git push
