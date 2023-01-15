@@ -1,0 +1,20 @@
+name: Branch Filter Action
+
+on:
+  push:
+    branches:
+      - "main"
+      - "release/**"
+    tags:
+      - "v1.*"
+    paths:
+      - "**.js"
+    # paths-ignore:
+    #   -"docs/**"
+
+jobs:
+  run-action-onbranch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files
+        run: echo github.ref_type
