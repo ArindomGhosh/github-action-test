@@ -20,7 +20,7 @@ jobs:
           git branch --set-upstream-to=origin/main
           git pull
           git fetch -a
-          echo ${{git branches}}
+          git branches
           # git checkout 'main'
           # echo $RANDOM >> random.txt
           # git add random
