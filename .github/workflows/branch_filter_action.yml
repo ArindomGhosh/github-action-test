@@ -2,13 +2,13 @@ name: Branch Filter Action
 
 on:
   push:
-    branches:
-      - 'main'
-      - 'release/**'
-    tags:
-      - v1.*
-    paths:
-      - '**.js'
+    # branches:
+    #   - 'main'
+    #   - 'release/**'
+    # tags:
+    #   - v1.*
+    # paths:
+    #   - '**.js'
     # paths-ignore:
     #   -"docs/**"
 
