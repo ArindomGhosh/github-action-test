@@ -1,8 +1,11 @@
 name: Cron Workflow
 
 on:
-  schedule:
-    - cron: "0/5 * * * *" # "m h DoM M DoW"
+  pull_request:
+    types:
+      - "closed"
+  # schedule:
+  #   - cron: "0/5 * * * *" # "m h DoM M DoW"
 
 jobs:
   run-cron-job:
