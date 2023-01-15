@@ -1,7 +1,7 @@
 name: Create File Workflow
 
 on:
-  push:
+  pull_request:
     
 
 jobs:
