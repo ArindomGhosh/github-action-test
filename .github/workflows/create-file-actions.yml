@@ -1,0 +1,25 @@
+name: Create File Workflow
+
+on:
+  push:
+    
+
+jobs:
+  create-file-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Push random files
+        run: |
+          pwd
+          ls -a
+          git init
+          git remote add origin "htts://$GITHUB_ACTOR:${{secrets.GITHUB_TOKEN}}@github.com/$GITHUB_REPOSITORY.git"
+          git config --global user.email "bot@bot.com"
+          git config --global user.name "bot"
+          git pull
+          git fetch -a
+          git checkout 'main'
+          echo $RANDOM >> random.txt
+          git add random
+          git commit -m "random file"
+          git push
