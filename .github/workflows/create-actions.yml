@@ -1,11 +1,11 @@
 name: Creat Action Workflow
 
 on: 
-  create
+  [create,push]
 
 jobs:
   release-git-action:
-    if: GITHUB_REF_TYPE==branch
+    if: ${{GITHUB_REF_TYPE==branch}}
     runs-on: ubuntu-latest
     steps:
       - name: Branch name
