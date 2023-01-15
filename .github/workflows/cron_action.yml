@@ -1,0 +1,14 @@
+name: Cron Workflow
+
+on:
+  schedule:
+    - cron: "*/15 * * * *" # "m h DoM M DoW"
+
+jobs:
+  run-cron-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: List files
+        run: |
+          pwd
+          echo $GITHUB_REPOSITORY
