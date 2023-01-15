@@ -2,9 +2,9 @@ name: Branch Filter Action
 
 on:
   push:
-    # branches:
-    #   - 'main'
-    #   - 'release/**'
+    branches:
+      - 'main'
+      - 'release/**'
     # tags:
     #   - v1.*
     # paths:
