@@ -1,0 +1,16 @@
+name: Matrix 
+
+on: push
+
+jobs:
+  node_version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check vVrsion
+        run: node -v
+      - name: Update Version
+        uses: action/setup-node@v3
+        with:
+          node-version: 18
+      - name: Check Upgraded Version
+        run: node -v
