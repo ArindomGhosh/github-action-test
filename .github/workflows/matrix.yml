@@ -16,9 +16,9 @@ jobs:
         exclude:
           - os: windows-latest
             node_version: 16
-    runs-on: ${{ matrix.is_node_14}}
+    runs-on: ${{ matrix.os}}
     env:
-      IS_NODE_14: ${{ matrix. }}
+      IS_NODE_14: ${{ matrix.is_node_14 }}
     steps:
       - name: Check Version
         run: node -v
